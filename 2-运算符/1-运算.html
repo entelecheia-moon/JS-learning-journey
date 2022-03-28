@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(1 + 1);
+        console.log(1 - 1);
+        console.log(7 * 8);
+        console.log(6 / 3);
+        // 1.%--取余
+        console.log(4 % 3);
+        console.log(3 % 5);
+        // 2.浮点数运算会有问题
+        console.log(0.1 + 0.2);//0.300000000004
+        console.log(0.07 *100);//7.000000000001
+        //3.我们不能直接拿着浮点数来进行相比较 是否相等 
+        var num = 0.1 + 0.2;
+        console.log(num == 0.3);//flase
+        // 先乘除后加减 有括号先括号
+        console.log(1 + 2 * 3);
+        //1. 让变量自己加一
+        var num1 = 1;
+        num1 = ++num1;
+        console.log(num1);
+        //2.前置递增运算符 ++ 写在变量的前面
+        var age = 1;
+        ++age;
+        console.log(age);
+        //3.例子
+        var p = 10;
+        console.log(++p +10);
+        //4.后置递增符--先返回原值，后自加
+        var num2 = 10;
+        num2++
+        console.log(num2);
+        console.log(num2++ + 10); //21 而不是22
+        console.log(num2);        //12 
+        // 5.例子
+        var e = 10;
+        var f =e++ + ++e; //1.e++ =10 e=11   2.e=12 ++e=12
+        console.log(f);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
