@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i=1;
+        do {
+            console.log(i);
+            i++;
+        } while (i<9)
+        // do while 至少执行一次
+        // 1.
+        do {
+            console.log('今年'+ i + '岁了');
+            i++;
+        } while (i<=100)
+        // 2.
+        var sum = 0;
+        var j =1;
+        do {
+            j++;
+            sum +=j;
+        } while (j<=100)
+        console.log(sum);
+        // 3.
+        do {
+            var message = prompt('你爱我吗');
+        } while (message !=='我爱你')
+        alert('我也爱你')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
