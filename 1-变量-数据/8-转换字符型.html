@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 数字型转换为字符型
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        console.log(typeof str);
+        // 2.利用String(变量)
+        console.log(String(num));
+        // 3.利用+拼接字符串的方法实现转换效果 隐式转换
+        console.log(num + '');
+        // 
+        //二，转换为数字型 
+        var age = prompt('请输入你的年龄');
+        // 1.parseInt(变量) 可以把 字符类型的转换为数字类型 得到的是整数
+        console.log(parseInt(age));
+        console.log(parseInt('3.14'));  //3取整
+        console.log(parseInt('120px')); // 120 会去掉px这个单位
+        console.log(parseInt('rem3.14px'));  //NaN
+        // 2.parseFloat(变量) 可以得到 浮点数
+        console.log(parseFloat(3.14)); //3.14
+        // 3.利用Number(变量)
+        var str = '123';
+        console.log(Number(str));
+        console.log(Number('12'));
+        // 4.利用了算数运算 - * / 隐式转换
+        console.log('12' - 0); //12
+        console.log('123' - '120');
+        console.log('123' * 1);
+        // 
+        // 三，转换为布尔型--代表空和否定的值会转换为flase
+        console.log(Boolean(''));             //flase
+        console.log(Boolean(0));              //flase
+        console.log(Boolean(NaN));            //flase
+        console.log(Boolean(null));           //flase
+        console.log(Boolean(undefined));      //flase
+        console.log(Boolean('123'));          //true
+        console.log(Boolean('are you ok'));   //true 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 
