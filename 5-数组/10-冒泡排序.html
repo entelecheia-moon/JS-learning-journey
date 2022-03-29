@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 从小到大排序
+        var arr=[4,2,5,1,3,7,8,2,10,3];
+        var sep;
+        for (var i=1;i<arr.length;i++) {
+            // -i,减少次数
+            for (var j=0;j<arr.length-i;j++) {
+                if (arr[j]>arr[j+1]) {
+                    sep=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=sep;
+                }
+            }
+        }
+        alert(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

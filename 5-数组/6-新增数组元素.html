@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.新增数组元素 修改length长度
+        var arr=['red','green','blue'];
+        console.log(arr.length);
+        arr.length = 5;
+        console.log(arr);
+        console.log(arr[3]);  //undefined
+        console.log(arr[4]);  //undefined
+        // 2.新增数组元素
+        arr[3] = 'pink';
+        console.log(arr);
+        arr[4] = '某某';
+        console.log(arr);
+        // 替换原来的数组元素
+        arr[1] = 'hh';
+        console.log(arr);
+        // 不要直接给 数组名赋值 否则里面的数组元素都没有了
+        arr='有点意思';
+        console.log(arr);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
