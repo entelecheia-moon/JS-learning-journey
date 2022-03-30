@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.求任意两个数的和
+        function getSum(num1,num2) {
+            alert(num1+num2);
+        }
+        getSum(1,3);
+        getSum(3,8);
+        // 2.任意两个数之间的和
+        function Sum (num1,num2) {
+            var sum=0;
+            for (var i=num1;i<=num2;i++) {
+                sum+=i;
+            }
+            alert(sum);
+            console.log(sum);
+        }
+        Sum(1,3);
+        Sum(1,100);
+        // 如果实参的个数多于形参，取到形参的个数
+        Sum(1,2,3);
+        // 如果少于--num2是一个变量没有接受值--undefined
+        getSum(1);     //NaN
+        Sum(1);        //0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
