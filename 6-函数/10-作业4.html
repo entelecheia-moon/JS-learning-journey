@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sushu(num) {
+            var count = 0;
+            for (var i = 1; i <= num; i++) {
+                if (num % i == 0) {//因子
+                    count++;
+                }
+            }
+            //循环结束后 如果 count == 2  一定是素数
+            if (count == 2) {
+                return num + "是素数";
+            } else {
+                return num + "不是素数";
+            }
+        }
+        var Num = Number(prompt("请输入一个正整数,判断此数是不是素数"));
+        alert(sushu(Num));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

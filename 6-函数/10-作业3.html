@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function max(num1,num2,num3) {
+            var sep;
+            if (num1>num2) {
+                sep=num1;
+            }else{
+                sep=num2;
+            }
+            if (sep>num3) {
+                return sep;
+            }else {
+                return num3;
+            }
+        }
+        var Num1=prompt('第一个数是');
+        var Num2=prompt('第二个数是');
+        var Num3=prompt('第三个数是');
+        var result=max(Num1,Num2,Num3);
+        alert('最大的是'+result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt('请输入您要计算的第一个数字');
+        var sybol = prompt('请输入+ - * / 运算符');
+        var num2 = prompt('请输入第二个要计算的数字')
+        function getSum(num1, sybol, num2) {
+            if (sybol=='+') {
+                return num1+num2;
+            } else if (sybol=='-') {
+                return num1-num2;
+            } else if (sybol=='*') {
+                return num1*num2;
+            }else if (sybol=='/') {
+                return num1/num2;
+            }else {
+                alert('格式错误');
+            }
+        }
+        var result = getSum(parseFloat(num1), sybol, parseFloat(num2));
+        alert('通过计算您得到的答案是：' + result);
+        </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
