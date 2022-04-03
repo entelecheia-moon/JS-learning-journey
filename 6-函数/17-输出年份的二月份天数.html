@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function backday() {
+            var year=prompt('请你输入年份');
+            if(isRunYear(year)) { //调用函数需要加小括号
+                alert('当前年份是闰年2月份有29天');
+            } else {
+                alert('当前年份是平年2月份有28天');
+            }
+        }
+        backday();
+
+        // 判断是否为闰年的函数
+        function isRunYear(year) {
+            // 如果是闰年我们返回 true 否则返回false
+            var flag=false;
+            if (year % 4 ==0 && year % 100 !=0 || year % 400 ==0) {
+                flag=true;
+            }
+            return flag;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
