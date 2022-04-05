@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 10);
+        // var num=Math.random();
+        // var num = Number(prompt('请猜一猜数字是几'));
+        // while (num !== random) {
+        //     alert('猜错了');
+        //     var sep = Number(prompt('再猜一猜数字是几'));
+        // }
+        while(true) {
+            var num = Number(prompt('请猜一猜数字是几'));
+            if (num>random) {
+                alert('猜大了');
+            } else if(num <random) {
+                alert('猜小了');
+            } else {
+                alert('哎呦，不错哦，猜对了');
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
