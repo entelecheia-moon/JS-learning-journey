@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj={
+            name:'电脑',
+            color:'',
+            weight:'',
+            type:'',
+            xh:'',
+            skill:function(){
+                console.log('看电影，听音乐，打游戏，敲代码');
+            }
+        }
+
+        
+        var obj=new Object();
+        obj.weight='';
+        obj.height='';
+        obj.bgc='';
+        obj.skill='点击行为';
+
+
+        function Car(weight,color,pz) {
+            this.weight=weight;
+            this.color=color;
+            this.skill=function(){
+                console.log('载人，拉货，耕地');
+            }
+        }
+        var car=new Car('车','red','小刀');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
