@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数组排序
+        // 1.翻转数组
+        var arr=['pink','blue','red'];
+        arr.reverse();
+        console.log(arr);
+        // 2.数组排序 (冒泡排序)
+        var arr1=[3,4,7,1];
+        arr1.sort();
+        console.log(arr1);
+
+        // 两位数不行,不能直接sort
+        var arr2=[13,4,7,1];
+        // arr2.sort();
+        // console.log(arr2);
+        arr2.sort(function(a,b) {
+            // return a-b; //升序
+            return b-a; //降序
+        });
+        console.log(arr2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
