@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 返回数组元素的索引号 indexOf--从前面开始查找
+        // 他只返回第一个满足条件的索引号
+        // 他如果在该数组里面找不到元素 则返回-1
+        var arr1=['red','green','blue','pink','red'];
+        console.log(arr1.indexOf('blue'));  //2
+        console.log(arr1.indexOf('ccc'));   //-1
+
+        // lastIndexOf--从后面开始查找
+        var arr2=['red','green','blue','pink','red','lll'];
+        console.log(arr2.lastIndexOf('red'));  //4
+        console.log(arr2.lastIndexOf('blue'));  //2
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
