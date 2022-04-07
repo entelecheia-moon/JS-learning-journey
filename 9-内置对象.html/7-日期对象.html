@@ -14,6 +14,18 @@
         console.log(date1); //返回的是11月不是10月
         var date2=new Date('2019-10-1 8:8:8');
         console.log(date2);
+
+        // 年月日
+        var year=date.getFullYear();  //年
+        var month=date.getMonth()+1  //比正常小一个月，记得加一
+        var day=date.getDay();   //星期
+        var date=date.getDate();  //几号
+        var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        console.log(year);
+        console.log(month);  
+        console.log(day);  //周日返回的是0
+        console.log(date);
+        console.log('今天是：' +year+'年'+ month +'月'+date+'日 '+arr[day]);
     </script>
 </head>
 <body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date);
+        console.log(date.getHours());    //时
+        console.log(date.getMinutes());  //分
+        console.log(date.getSeconds());  //秒
+        // 封装函数  返回时分秒  格式08:08:08
+        function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            var year = time.getFullYear();  //年
+            var month = time.getMonth() + 1  //比正常小一个月，记得加一
+            var day = time.getDay();   //星期
+            var date = time.getDate();  //几号
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            // console.log('今天是：' + year + '年' + month + '月' + date + '日 ' + arr[day]);
+            return '今天是：' + year + '年' + month + '月' + date + '日 ' + arr[day]   + h + ':' + h + ':' + s;
+        }
+        // alert(getTime());
+        console.log(getTime());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
