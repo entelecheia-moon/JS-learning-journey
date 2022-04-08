@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.tiString()将我们的数组转换为字符串
+        var arr=[1,2,3];
+        console.log(arr.toString());  //1,2,3
+        // 2. join 分隔符
+        var arr1=['green','blue','pink'];
+        console.log(arr1.join());
+        console.log(arr1.join('-'));
+        console.log(arr1.join('*'));
+        arr1.splice(2,0,'1');
+        console.log(arr1);
+        var arr2=arr1.slice(0,2); //拷贝了arr1里的[0-2)的数
+        console.log(arr2);
+        var arr3=arr1.concat(arr2);
+        console.log(arr3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

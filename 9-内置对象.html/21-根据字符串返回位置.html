@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str='改革春风吹满地,春天来了';
+        console.log(str.indexOf('春'));  //2
+        console.log(str.indexOf('春',3));   //8
+        console.log(str.lastIndexOf('春'));   //8
+        console.log(str.lastIndexOf('春',3));  //2
+        // 案例
+        var str1='abcojkdahudikbmnoiuiioo';
+        var index=str1.indexOf('o');
+        console.log(index);
+        var num=0;
+        while(index !==-1) {
+            console.log(index);
+            num++;
+            index=str1.indexOf('o',index+1);
+        }
+        console.log(index);
+        console.log("出现了"+num+'次');
+        // 课后作业--求red出现的位置和次数['red','blue','red','green','pink','red']
+        var arr=['red','blue','red','green','pink','red'];
+        var index1=arr.indexOf('red');
+        // console.log(index1);
+        var num1=0;
+        while(index1 !==-1) {
+            console.log(index1);
+            num1++;
+            index1=arr.indexOf('red',index1+1);
+        }
+        console.log("red出现了"+num1+'次');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
