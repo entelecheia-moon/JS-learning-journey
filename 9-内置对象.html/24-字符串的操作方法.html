@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.拼接字符串 concat() 相当于+
+        var str='andy';
+        console.log(str.concat('red'));
+        console.log(str+'hhh');
+        // 2.substr('截取的起始位置,'截取几个字符')
+         var str1='改革春风吹满地';
+         console.log(str1.substr(2,2));  //春风---第一个2是索引号的2,第二个是去几个字符
+        //  3.替换字符replace('被替换的字符','替换的字符')
+        var str2='andyandy';
+        console.log(str2.replace('a','b'));
+        // 把o替换成*
+        var str3='aosfiewopoodsjkncdkofopooeow';
+        console.log(str3.replace('o','*'));  //只能替换第一个
+        while(str3.indexOf('o') !==-1) {
+            str3=str3.replace('o','*');
+        }
+        console.log(str3);
+        // 4.字符转换为数组  split 分隔符
+        var str4='red,pink,blue';
+        console.log(str4.split(','));
+        var str5='redpinkblue';
+        console.log(str5.split('&'));
+        //5.转化大小写
+        var str6='jscbbTYUG';
+        console.log(str6.toUpperCase());  //大写
+        console.log(str6.toLowerCase());   //小写
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
