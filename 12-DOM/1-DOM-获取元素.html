@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // DOM--文档对象模型
+        // 获取元素
+        // 1.
+    </script>
+</head>
+<body>
+    <div id="hhh">哈哈哈</div>
+    <ul>
+        <li>我想要天上的月亮1</li>
+        <li>我想要天上的月亮2</li>
+        <li>我想要天上的月亮3</li>
+        <li>我想要天上的月亮4</li>
+        <li>我想要天上的月亮5</li>
+    </ul>
+    <ol id="ol">
+        <li>月亮1</li>
+        <li>月亮2</li>
+        <li>月亮3</li>
+        <li>月亮4</li>
+        <li>月亮5</li>
+    </ol>
+    <script>
+        // 1.因为文档页面从上往下加载,所以先得有标签  所以script写到标签下面
+        // 2.get 获得 element 元素  by通过 驼峰命名法
+        // 3.参数  id是大小写敏感的字符串
+        // 4.返回的是一个元素对象
+        var timer=document.getElementById('hhh');
+        console.log(timer);
+        console.log(typeof timer);
+        // 5.console.dir打印我们返回的元素对象  更好的查看里面的属性和方法
+        console.dir(timer);
+        // 
+        // 1.document.getElementsByTagName--返回的是 获取元素对象的集合  以伪数组的形式存储
+        var lis=document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+        // 2.我们想要依次打印里面的元素对象我们可以采取遍历的方式
+        for (var i=0;i<lis.length;i++) {
+            console.log(lis[i]);
+        }
+        // 得到元素是动态的
+        // 3.如果页面中只有一个li  返回的还是伪数组的形式
+        // 4.如果页面中没有这个元素，返回空的伪数组
+        // 5.element.getElementsByTagName('标签名');父元素必须是指定的单个元素
+        var ol=document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+
+    </script>
+</body>
+</html>
