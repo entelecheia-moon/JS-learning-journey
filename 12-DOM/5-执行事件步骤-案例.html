@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">123</div>
+    <script>
+        // var div=document.getElementById('div');
+        // 1.获取事件源
+        var div=document.querySelector('div');
+        // 2.绑定事件 注册事件
+        // .onclick
+        // 3.添加处理事件程序
+        div.onclick=function() {
+            alert('我被选中了');
+        }
+    </script>
+</body>
+</html>
