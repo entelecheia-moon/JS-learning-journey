@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .first {
+            border: 2px solid red;
+        }
+        .change {
+            background-color: aqua;
+            columns: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">文本</div>
+    <script>
+        var div = document.querySelector('div');
+        var flag = 0;
+        div.onclick = function () {
+            if (flag == 0) {
+                // 让我们当前元素的类名改成了change
+                this.className = 'first change';
+                flag = 1;
+            } else {
+                // className会覆盖
+                // 如果想要保留原先的类名---'first change'
+                this.className = '';
+                flag = 0;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
