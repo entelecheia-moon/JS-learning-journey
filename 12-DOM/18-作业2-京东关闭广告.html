@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 80px;
+            background-color: pink;
+            position: relative;
+        }
+        .wrong {
+            display: block;
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            background-color: rgba(0,0, 0, 0.3);
+            text-align: center;
+            line-height: 20px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#" class="wrong">X</a>
+    </div>
+    <script>
+        var box=document.querySelector('.box');
+        var wrong=document.querySelector('.wrong');
+        wrong.onclick=function() {
+            box.style.display='none';
+        }
+    </script>
+</body>
+</html>

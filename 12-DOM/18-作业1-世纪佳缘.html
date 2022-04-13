@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 30px;
+            margin: 100px auto;
+            /* background-color: pink; */
+        }
+        .box input {
+            float: left;
+            outline: none;
+            padding: 0;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            height: 28px;
+            width: 200px;
+            color: #999;
+            text-indent: 0.5em;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            float: left;
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            background-color: rgb(18, 149, 201);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" value="邮箱/ID/手机号" >
+        <input type="password" placeholder="密码">
+        <a href="#">登录</a>
+    </div>
+    <script>
+        var text=document.querySelector('input');
+        text.onfocus=function() {
+            // console.log('得到了焦点');
+            if (this.value ==='邮箱/ID/手机号') {
+                this.value='';
+            }
+            this.style.color='#333';
+            this.style.border='1px solid pink';
+            // 获得焦点把文本框里的颜色变深
+        }
+        text.onblur=function() {
+            // console.log('失去了焦点');
+            if (this.value==='') {
+                this.value='邮箱/ID/手机号';
+            }
+            this.style.border='1px solid #ccc';
+            this.style.color='#999';
+        }
+    </script>
+</body>
+</html>

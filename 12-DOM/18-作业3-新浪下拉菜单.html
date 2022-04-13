@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            display: block;
+            width: 100px;
+            height: 30px;
+            border: 1px solid rgb(255, 187, 0);
+            line-height: 30px;
+            text-align: center;
+            color: black;
+            box-sizing: border-box;
+        }
+
+        .first {
+            border: 0;
+        }
+
+        a:hover {
+            color: rgb(255, 123, 0);
+        }
+
+        .xl {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="first">微博^</a>
+    <div class="xl">
+        <a href="#" >私信</a>
+        <a href="#" >评论</a>
+        <a href="#" >@我</a>
+    </div>
+    <script>
+        var first = document.querySelector('.first');
+        var xl = document.querySelector('.xl');
+        first.onmouseover = function () {
+            xl.style.display = 'block';
+        }
+        xl.onmouseout=function() {
+            xl.style.display='none';
+        }
+        xl.onmouseover=function() {
+            xl.style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>
