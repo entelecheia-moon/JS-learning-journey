@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        img {
+            position: absolute;
+            top: 200px;
+            left: 400px;
+            /* transform: translate(-50%); */
+        }
+    </style>
+</head>
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        var pic=document.querySelector('img');
+        document.addEventListener('keyup',function(e){
+            if(e.key=='s') {
+                pic.style.transform='translateY(100px)';
+            }else if(e.key=='w') {
+                pic.style.transform='translateY(-100px)';
+
+            }else if (e.key=='a') {
+                pic.style.transform='translateX(-100px)';
+
+            }else if (e.key=='d') {
+                pic.style.transform='translateX(100px)';
+            }else {
+                alert('按错了')
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 217, 255);
+        }
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        var pic=document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+            //1. mousemove 只要我们的鼠标移动1px就会触发这个事件
+            //2. 核心原理:每次鼠标移动,我们就会获得最新的鼠标坐标,把这个x,y作为图片的left和top就可以了
+            var x=e.pageX;
+            var y=e.pageY;
+            // 不要忘记给left 和top加px
+            pic.style.left=x-50+'px';
+            pic.style.top=y-40+'px';
+
+        })
+    </script>
+</body>
+</html>
