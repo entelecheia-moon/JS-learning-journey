@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .search {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 100px;
+            padding-top: 10px;
+            /* text-align: center; */
+            /* background-color: pink; */
+        }
+
+        .search .con {
+            display: none;
+            position: relative;
+            width: 180px;
+            height: 30px;
+            margin: 10px auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,.2);
+            font-size: 20px;
+            line-height: 30px;
+            color: #333;
+            text-align: left;
+        }
+
+        .search .con::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top-color: #fff;
+            border-style: solid dashed dashed;
+        }
+
+        .search input {
+            width: 172px;
+            border: 1px solid #777;
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <div class="con">
+            <div class="con_icon"></div>
+        </div>
+        <input type="text" placeholder="  请输入您的快递单号" class="jd">
+    </div>
+    <script>
+        var jd_input = document.querySelector('.jd');
+        var con = document.querySelector('.con');
+        jd_input.addEventListener('keyup', function () {
+            if (this.value != '') {
+                con.style.display = 'block';
+                con.innerHTML = this.value;
+            } else {
+                con.style.display = 'none';
+            }
+        })
+        // 失去焦点，隐藏盒子
+        jd_input.addEventListener('blur', function () {
+            con.style.display = 'none';
+        })
+        // 获得焦点
+        jd_input.addEventListener('focus', function () {
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        })
+
+    </script>
+</body>
+
+</html>
