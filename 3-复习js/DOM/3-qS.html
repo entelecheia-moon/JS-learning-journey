@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p>我是段落</p>
+        <p class="spec para">我是段落</p>
+        <p>我是段落</p>
+    </div>
+    <ul id="list1">
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+    </ul>
+    <ul id="list2">
+        <li>我是li2-1</li>
+        <li>我是li2-2</li>
+        <li>我是li2-3</li>
+        <li>我是li2-4</li>
+        <li>我是li2-5</li>
+    </ul>
+    <script>
+        // var the_p=document.querySelector('#box.spec');------//得不到//为null
+        var the_p=document.querySelector('.spec');
+        var the_p1=document.querySelector('#box p:nth-child(1)');
+        console.log(the_p);
+        console.log(the_p1);
+        var list1=document.querySelectorAll('#list1 li');
+        console.log(list1);
+        console.log(list1[0]);
+    </script>
+</body>
+</html>
