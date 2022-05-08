@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin:100px auto;
+            padding-top: 50px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            padding-top: 10px;
+            margin:auto;
+            padding-top:25px;
+            background-color: pink;
+        }
+        .box3{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+    实际上：先从外往内，再从内到外。先捕获再冒泡。
+    <script>
+        var box1=document.querySelector('.box1');
+        var box2=document.querySelector('.box2');
+        var box3=document.querySelector('.box3');
+        box1.addEventListener('click',function(){
+            alert('box1捕获');
+        },true);
+        box2.addEventListener('click',function(){
+            alert('box2捕获');
+        },true);
+        box3.addEventListener('click',function(){
+            alert('box3捕获');
+        },true);
+        box1.addEventListener('click',function(){
+            alert('box1冒泡');
+        },false);
+        box2.addEventListener('click',function(){
+            alert('box2冒泡');
+        },false);
+        box3.addEventListener('click',function(){
+            alert('box3冒泡');
+        },false);
+        
+        
+    </script>
+</body>
+</html>
