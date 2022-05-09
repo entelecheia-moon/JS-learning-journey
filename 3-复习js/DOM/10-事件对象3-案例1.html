@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <input type="text" id="field">
+    </p>
+    <script>
+        var ofield = document.getElementById('field');
+        ofield.onkeypress = function (e) {
+            console.log(e.charCode);
+            // 根据用户输入的字符的字符码(e.charCode)
+            // 数字0~9，字符码48~57;
+            // 小写字母a~z,字符码97~122;
+            if (!(e.charCode >= 48 && e.charCode <= 57 || e.charCode >= 97 && e.charCod <= 122)) {
+                // 阻止浏览器默认行为
+                e.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
