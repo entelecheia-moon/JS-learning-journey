@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function People(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing=function() {
+                console.log();
+            }
+        }
+        People.prototype.nationality = '中国';
+        var xiaoming = new People('小明',12,'男');
+        console.log(xiaoming.nationality);
+        console.log(xiaoming);
+        // 原型链的遮蔽效应
+        var tom = new People('汤姆',10,'男');
+        tom.nationality='美国';
+        console.log(tom.nationality);
+    </script>
+</body>
+</html>
