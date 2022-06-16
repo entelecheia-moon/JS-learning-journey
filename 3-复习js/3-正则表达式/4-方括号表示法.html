@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 某学校的学号规定:第1位是一个字母,b表示本科生,y表示研究生,后面是7位数字,用正则表示为:
+        var regexp= /^[yb]\d{7}$/;
+        var str='y1234567';
+        var str1='m1234567';
+        console.log(regexp.test(str));
+        console.log(regexp.test(str1));
+        console.log('结束');
+        // 1.验证某字符串是否是5位字母,大小写均可
+        var regexp1=/^[a-zA-Z]{5}$/;
+        var str2='aasdf';
+        var str3='ASFGF';
+        var str4='1wdsa';
+        console.log(regexp1.test(str2));
+        console.log(regexp1.test(str3));
+        console.log(regexp1.test(str4));
+        console.log('1结束');
+        // 2.验证某字符串是否是5位,且仅由小写字母,点构成
+        var regexp2=/^[a-z\.]{5}$/;
+        var str5='aas.f';
+        var str6='AS.GF';
+        var str7='awds.';
+        console.log(regexp2.test(str5));
+        console.log(regexp2.test(str6));
+        console.log(regexp2.test(str7));
+        console.log('2结束');
+        // 3.验证某字符串是否是4位小写字母,且最后一位不能是m
+        var regexp3=/^[a-z]{3}[a-ln-z]$/;
+        var str8='aasf';
+        var str9='AeGs';
+        var str0='awdm';
+        console.log(regexp3.test(str8));
+        console.log(regexp3.test(str9));
+        console.log(regexp3.test(str0));
+    </script>
+</body>
+</html>
