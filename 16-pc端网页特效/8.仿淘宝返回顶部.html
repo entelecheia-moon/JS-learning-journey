@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            background-color: rgb(243, 191, 191);
+        }
+
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+        }
+
+        .header {
+            height: 150px;
+            background-color: purple;
+        }
+
+        .banner {
+            height: 250px;
+            background-color: skyblue;
+        }
+
+        .main {
+            height: 2000px;
+            background-color:aqua;
+        }
+
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <span class="goBack">返回顶部</span>
+    </div>
+    <div class="header w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体部分</div>
+    <script>
+        // 1.获取元素
+        var sliderBar = document.querySelector('.slider-bar');
+        var banner = document.querySelector('.banner');
+        // banner.offsetTop就是被卷去头部的大小   一定要写到滚动的外面
+        var bannerTop = banner.offsetTop;
+        // 当侧边栏固定后top的值
+        var sliderBarTop = sliderBar.offsetTop - bannerTop;
+        // 获取main
+        var main = document.querySelector('.main');
+        var goBack = document.querySelector('.goBack');
+        var mainTop = main.offsetTop;
+        // 2.页面滚动事件
+        document.addEventListener('scroll', function () {
+            // 页面被卷去的头部
+            // console.log(window.pageYOffset);
+            if (window.pageYOffset >= bannerTop) {
+                sliderBar.style.position = 'fixed';
+                sliderBar.style.top = sliderBarTop + 'px';
+            } else {
+                sliderBar.style.position = 'absolute';
+                sliderBar.style.top = '300px';
+            }
+
+            if (window.pageYOffset >= mainTop) {
+                goBack.style.display = 'block';
+            } else {
+                goBack.style.display = 'none';
+            }
+        });
+
+
+        // 返回顶部-自写
+        var timer;
+        goBack.addEventListener('click', function () {
+            // 设表先关
+            clearInterval(timer);
+            timer = setInterval(function () {
+                document.documentElement.scrollTop -= 100;
+                if (document.documentElement.scrollTop <= 0) {
+                    clearInterval(timer);
+                }
+            }, 20);
+        });
+    </script>
+</body>
+
+</html>
