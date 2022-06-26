@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .span{
+            display: block;
+            left: 0;
+            top: 200px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击后运行</button>
+    <div class="box"></div>
+    <span class="span">路星辞</span>
+    <script>
+        function animate(obj, target) {
+            // 当不断的点击按钮，速度会越来越快
+            // 让元素只有一个定时器执行
+
+            // 设表先关
+            clearInterval(obj.move);
+            obj.move = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    // 停止动画
+                    clearInterval(obj.move);
+                }
+                obj.style.left = obj.offsetLeft + 3 + 'px';
+            }, 30)
+        }
+        var box = document.querySelector('.box');
+        var span = document.querySelector('.span');
+        var btn =document.querySelector('button');
+        // animate(box,700);
+        // animate(span,600);
+        // 调用函数
+        animate(box,300);
+        btn.addEventListener('click',function(){
+            animate(span,200);
+        })
+  
+    </script>
+</body>
+
+</html>
