@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .span {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">点击后运行都500</button>
+    <button class="btn800">点击后到800</button>
+    <div class="box"></div>
+    <span class="span">路星辞</span>
+    <script>
+        // 核心算法:(目标值-现在的位置)/10 做为每次移动的距离  步长
+        function animate(obj, target, callback) {
+            // 当不断的点击按钮，速度会越来越快
+            // 让元素只有一个定时器执行
+
+            // 设表先关
+            clearInterval(obj.move);
+            obj.move = setInterval(function () {
+                // 步长值到定时器的里面
+                // 把步长值改为整数,不要出现小数问题
+                // 往大取整
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    // 停止动画
+                    clearInterval(obj.move);
+                    // 回调函数写到定时器里面
+                    if (callback) {
+                        // 调用函数
+                        callback();
+                    }
+                }
+                // 把每次加1 这个步长值改为一个慢慢变小的值;
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 15);
+        }
+        var box = document.querySelector('.box');
+        var span = document.querySelector('.span');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        // animate(box,700);
+        // animate(span,600);
+        // 调用函数
+        animate(box, 300);
+        btn500.addEventListener('click', function () {
+            animate(span, 500);
+        });
+        btn800.addEventListener('click', function () {
+            // 调用函数                
+            animate(span, 800, function () {
+                span.style.backgroundColor = 'red';
+            });
+        });
+
+    </script>
+</body>
+
+</html>
